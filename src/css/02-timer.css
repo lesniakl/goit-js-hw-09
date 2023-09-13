@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'datetime-picker datetime-picker datetime-picker start'
+    'timer timer timer timer';
+  padding: 40px 20px;
+  max-width: 25vw;
+}
+
+#datetime-picker {
+  grid-area: datetime-picker;
+  height: 50px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.start {
+  grid-area: start;
+  height: 50px;
+}
+
+.timer {
+  grid-area: timer;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.value {
+  text-align: center;
+  font-size: 2em;
+}
+.label {
+  text-align: center;
+}
